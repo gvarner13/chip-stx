@@ -1,0 +1,70 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import InstaLogo from "../components/InstaLogo.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <section id="hero">
+      <div class="container">
+        <div id="main-logo">
+          <div
+            style="width: 500px; height: 500px; border: 2px solid red; margin: 1rem"
+          >
+          </div>
+        </div>
+        <div id="main-text"><p>Modern Alignment Sticks</p></div>
+        <div id="social-footer">
+          <InstaLogo />
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    background: #13151a;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    border: 2px solid blue;
+    padding: 2rem;
+  }
+
+  p {
+    color: white;
+  }
+
+  .container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1600px;
+  }
+
+  #hero {
+    display: flex;
+  }
+
+  #social-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  #main-text {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  #main-logo {
+    border: 2px solid red;
+  }
+
+  svg {
+    color: white;
+  }
+</style>

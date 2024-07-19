@@ -1,22 +1,35 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 import InstaLogo from "../components/InstaLogo.astro";
-import Logo from "../Chip_Stx_flag_pink_v2.png";
-import { Image } from "astro:assets";
+import Flagstx from "../components/Flagstx.astro";
 ---
 
 <Layout title="Chip Stx">
   <main class="w-3/4 mx-auto p-8">
     <section id="hero" class="flex">
       <div class="container">
-        <div id="main-logo" class="flex justify-center">
-          <div>
-            <Image src={Logo} alt="A sexy golf pic" />
+        <div id="main-logo" class="flex flex-col relative items-center">
+          <div class="pr-8"><Flagstx /></div>
+          <div class="absolute inset-x-0 bottom-0 flex justify-center">
+            <div>
+              <h1 class="text-white text-9xl font-['SpriteGraffiti']">
+                Chip Stx
+              </h1>
+            </div>
           </div>
         </div>
-        <div id="social-footer" class="flex justify-center">
-          <InstaLogo />
+        <div class="flex flex-col items-center gap-5">
+          <div>
+            <p class="text-white font-mono uppercase font-bold text-2xl">
+              custom alignment sticks
+            </p>
+          </div>
+          <div class="rounded-full border-2 border-pink-400 m-auto px-6 py-2">
+            <p class="text-white font-mono">2024</p>
+          </div>
+          <div id="social-footer" class="flex justify-center">
+            <InstaLogo />
+          </div>
         </div>
       </div>
     </section>
